@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
+    <meta name="Description" content="A basic biography page." />
+    <link rel="stylesheet" href="CSS\styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Contact information</title>
+  </head>
+  <body class="body-content">
+    <header class="Top_of_Page">
+      <nav class="Flexbox">
+        <ul>
+          <li class="inline">
+            <a class="navigation" href="index.html" title="Homepage"
+              >Homepage</a
+            >
+          </li>
+          <li class="inline">
+            <a class="navigation" href="Favorites.html" title="Favorites list"
+              >Favorites</a
+            >
+          </li>
+          <li class="inline">
+            <a class="navigation" href="gallery.html" title="PastTimes"
+              >Hobbies</a
+            >
+          </li>
+          <li class="inline">
+            <a class="navigation" href="resume.html" title="Resume">Resume</a>
+          </li>
+          <li class="inline">
+            <a class="navigation" href="Contact-Me.html">Get in Touch!</a>
+          </li>
+          <li class="inline">
+            <a class="navigation" href="mailto:zrlongoria22991@mymail.tstc.edu"
+              >Zackary's Email</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1 class="Contact">How should I Contact you?</h1>
+    <form>
+      <div class="Container">
+        <legend>Contact information</legend>
+        <fieldset>
+          <label for="uname"><strong>Name</strong></label>
+          <input type="text" placeholder="Enter name" name="uname" />
+          <label for="email"><strong>E-mail</strong></label>
+          <input type="text" placeholder="Enter E-mail" name="mail" />
+          <label for="Website"><strong>Web URL</strong></label> <br />
+          <input type="Website" placeholder="Webpage" /> <br />
+          <label for="phone">Phone Number</label> <br />
+          <input id="phone" name="phone" type="Tele" />
+        </fieldset>
+
+        <div class="Facts">
+          <label for="Color"><strong>Favorite Color</strong></label>
+          <input type="Color" placeholder="Favorite Color" name="Color" />
+          <legend>Favorite Movie Genre?</legend>
+          <select id="Movie Genre" name="Movie">
+            <fieldset>
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Horror">Horror</option>
+              <option value="Science Fiction">Science Fiction</option>
+              <option value="Western">Western</option>
+              <option value="None of the above">None</option>
+
+              <label for="Movie Genre">Favorite Movie Genre?:</label>
+              <textarea name="Movie Genre" form="Movie">
+Movie Genre here</textarea
+              >
+            </fieldset>
+            <legend>Favorite Activity?</legend>
+            <fieldset>
+              <div class="Activities">
+                <input
+                  type="radio"
+                  id="Outdoor"
+                  name="Activity"
+                  value="Outdoor"
+                />
+                <label for="Activity">Outdoor</label><br />
+                <input
+                  type="radio"
+                  id="Video_Games"
+                  name="Activity"
+                  value="Video_Games"
+                  checked
+                />
+                <label for="Activity" default>Video Games</label><br />
+
+                <input
+                  type="radio"
+                  id="Working_Out"
+                  name="Activity"
+                  value="Working_out"
+                />
+                <label for="Working_Out">Working out</label><br />
+                <input
+                  type="radio"
+                  id="Running"
+                  name="Activity"
+                  value="Running"
+                />
+                <label for="Activity" default> Running</label><br />
+                <input type="radio" id="None" name="Activity" value="None" />
+                <label for="None" default> None of the Above</label>
+                <textarea name="Activity" form="Activity">
+Favorite Activity?</textarea
+                ><br />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="Age_Slider">
+                <legend>Age?</legend>
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="10"
+                  class="slider"
+                  id="Age"
+                />
+                <!-- Had to look this part up for the slider to show the age. -->
+                <p>Value: <span id="demo"></span></p>
+
+                <script>
+                  var rangeslider = document.getElementById("Age");
+                  var output = document.getElementById("demo");
+                  output.innerHTML = rangeslider.value;
+
+                  rangeslider.oninput = function () {
+                    output.innerHTML = this.value;
+                  };
+                </script>
+                <!-- Javascript in HTML to show the value of the slider and adjust its behavior. -->
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Preferred Contact method?</legend>
+              <div class="Contact_Method">
+                <input
+                  type="Checkbox"
+                  id="Contact_Method"
+                  name="Conact_Method"
+                  value="Phone"
+                />
+                <label for="Contact_Method">Phone Call!</label>
+                <br />
+                <input
+                  type="Checkbox"
+                  id="Contact_Method"
+                  name="Conact_Method"
+                  value="text"
+                />
+                <label for="Contact_Method">Text me!</label>
+                <br />
+                <input
+                  type="Checkbox"
+                  id="Contact_Method"
+                  name="Conact_Method"
+                  value="Email"
+                />
+                <label for="Contact_Method">Email!</label>
+                <br />
+                <input
+                  type="Checkbox"
+                  id="Contact_Method"
+                  name="Conact_Method"
+                  value="All"
+                />
+                <label for="Contact_Method">All of The Above!!</label>
+                <input type="submit" value="Lets Talk!" />
+              </div>
+            </fieldset>
+          </select>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
+<!-- <div class="Party Info">
+            <label for="Color"><strong>Color</strong></label>
+            <input type="Color" placeholder="Favorite Color" name="Color" />
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="10"
+              class="slider"
+              id="Max-invite"
+            />
+            <select id="Flavor" name="Flavor">
+              <option value="Vanilla">Vanilla</option>
+              <option value="Choclate">Choclate</option>
+              <option value="Lemon">Lemon</option>
+              <option value="Red">Red</option>
+              <option value="Velvet">Velvet</option>
+              <option value="Funfetti">Funfetti</option>
+              <option value="Carrot">Carrot</option>
+              <option value="Coconut">Cocont</option>
+            </select>
+
+            <div class="Main_Course">
+              <input type="radio" id="Pizza" name="Food" value="Pizza" />
+              <label for="Food">Pizza</label><br />
+              <input
+                type="radio"
+                id="Tacos"
+                name="Food"
+                value="Tacos"
+                checked
+              />
+              <label for="Tacos" default>Tacos</label><br />
+              <input
+                type="radio"
+                id="Sandwhiches"
+                name="Food"
+                value="Sandwhiches"
+              />
+              <label for="Sandwhiches">Sandwhiches</label>
+              <br />
+              <input type="radio" id="Fajitas" name="Food" value="Fajitas" />
+              <label for="Fajitas">Fajitas</label>
+              <br />
+              <input type="radio" id="Fajitas" name="Food" value="Fajitas" />
+              <label for="Fajitas">Fajitas</label>
+              <br />
+              <input type="radio" id="Nachos" name="Food" value="Nachos" />
+              <label for="Nachos">Nachos</label>
+              <br />
+              <input type="radio" id="Pasta" name="Food" value="Pasta" />
+              <label for="Pasta">Pasta</label>
+              <br />
+            </div>
+            <div class="Desert">
+              <input
+                type="Checkbox"
+                id="Cookies"
+                name="Dessert"
+                value="Cookies"
+              />
+              <label for="Cookies">Cookies</label>
+              <br />
+              <input
+                type="Checkbox"
+                id="Brownies"
+                name="Dessert"
+                value="Brownies"
+              />
+              <label for="Brownies">Brownies</label>
+              <br />
+              <input type="Checkbox" id="Pie" name="Dessert" value="Pie" />
+              <label for="Pie">Pie</label>
+
+              <br />
+              <input
+                type="Checkbox"
+                id="Ice Cream"
+                name="Dessert"
+                value="Ice Cream"
+              />
+              <label for="Ice Cream">Ice Cream</label>
+              <br />
+              <input
+                type="Checkbox"
+                id="Cobbler"
+                name="Dessert"
+                value="Cobbler"
+              />
+              <label for="Cobbler">Cobbler</label>
+              <label for="Flavor">Choose a Flavor:</label>
+            </div>
+
+            <label for="Comments">Comments:</label>
+            <textarea name="comment" form="Comments">
+Enter text here...</textarea>
+          </div> -->
